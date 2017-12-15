@@ -14,18 +14,19 @@
     }
 
     function indexOf(array, item) {
-        if (array.indexOf) {
-            return array.indexOf(item);
-        } else {
-            var result = -1;
-            for (var i = 0, len = array.length; i < len; i++) {
-                if (array[i] === item) {
-                    result = i;
-                    break;
-                }
+        var result = -1
+        item = typeof item === 'object' 
+            ? item.listener 
+            : item
+        
+        for (var i = 0, len = array.length; i < len; i++) {
+            if (array[i].listener === item) {
+                result = i
+                break
             }
-            return result;
         }
+    
+        return result
     }
 
     function EventEmitter() {
