@@ -15,17 +15,17 @@
 
     function indexOf(array, item) {
         var result = -1
-        item = typeof item === 'object' 
-            ? item.listener 
+        item = typeof item === 'object'
+            ? item.listener
             : item
-        
+
         for (var i = 0, len = array.length; i < len; i++) {
             if (array[i].listener === item) {
                 result = i
                 break
             }
         }
-    
+
         return result
     }
 

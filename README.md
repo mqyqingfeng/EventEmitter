@@ -46,7 +46,7 @@ emitter.on(eventName, listener)
 删除一个事件监听器，支持链式调用
 
 ```js
-emitter.on(eventName, listener)
+emitter.off(eventName, listener)
 ```
 
 * eventName 事件名称
